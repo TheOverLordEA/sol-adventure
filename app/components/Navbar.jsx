@@ -16,6 +16,7 @@ export default function NavBar() {
             className=""
           />
         </Link>
+        <div className="white"></div>
       </div>
       <nav
         className="flex flex-1 items-center justify-start pl-5"
