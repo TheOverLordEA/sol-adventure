@@ -14,7 +14,7 @@ export default function ItemNav({ number, pageTitle, path }) {
       }`}
     >
       <Link href={path} className="flex gap-3">
-        <span className="font-bold ">{number}</span>{" "}
+        <span className="font-bold">{number}</span>{" "}
         <span className=" ">{pageTitle}</span>{" "}
       </Link>
     </li>

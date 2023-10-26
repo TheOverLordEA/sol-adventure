@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontSize: {},
+      fontFamily: { bellefair: ["var(--font-bellefair)"] },
       width: {
         "5/11": "44%",
       },
