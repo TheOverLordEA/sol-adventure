@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import styles from "../../styles/styles.module.css";
 
 export default function ItemNav({ number, pageTitle, path }) {
   const pathname = usePathname();
@@ -9,9 +10,7 @@ export default function ItemNav({ number, pageTitle, path }) {
   return (
     <li
       className={`link ${
-        pathname === path
-          ? "active border-b-4 text-white border-white tracking-widest flex items-center h-full hover:border-b-4 gap-3"
-          : "text-white hover:border-b-4 hover:border-gray-500 tracking-widest flex items-center h-full"
+        pathname === path ? styles.activeBorder : styles.beforeBorder
       }`}
     >
       <Link href={path} className="flex gap-3">
@@ -22,14 +21,13 @@ export default function ItemNav({ number, pageTitle, path }) {
   );
 }
 
-// text-white hover:border-b-2 tracking-widest flex items-center h-full
+// ("active border-b-4 text-white border-white tracking-widest flex items-center h-full hover:border-b-4 gap-3");
 
-// className={
-//   router.pathname == path
-//     ? "active text-white hover:border-b-2 tracking-widest flex items-center h-full"
-//     : "text-white hover:border-b-2 border-gray-200 tracking-widest flex items-center h-full"
-// }
+//Create before and and after
+// before:content-["*"] before:absolute;|
 
-// className={`link ${pathname === path ? "active text-black" : ""}`}
-
-// flex gap-3
+// {`link ${
+//   pathname === path
+//     ? "active border-b-4 text-white border-white tracking-widest flex items-center h-full hover:border-b-4 gap-3"
+//     : "text-white hover:border-b-4 hover:border-gray-500 tracking-widest flex items-center h-full"
+// }`}
